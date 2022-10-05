@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Building for production
       - rm -rf node_modules
-      - npm install --production
+      #- npm install --production
       #- npm test
 
 artifacts:
