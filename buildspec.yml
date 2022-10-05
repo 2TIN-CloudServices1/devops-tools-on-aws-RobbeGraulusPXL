@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+
+  pre_build:
+    commands:
+      - echo Running tests
+      - npm install
+      - sudo apt-get update
+      - curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+      - sudo apt-get install nodejs
+
+  build:
+    commands:
+      - echo Building for production
+      - rm -rf node_modules
+      - npm install --production
+      - npm test
+
+artifacts:
+  files:
+    - "**/*"
+  name: MyMegaApp-$(date +%Y-%m-%d) 
