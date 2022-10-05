@@ -10,7 +10,7 @@ phases:
       - echo Running tests
       - npm install
       - sudo yum install curl
-      - curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+      #- curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
       - sudo yum install nodejs
 
   build:
@@ -18,7 +18,7 @@ phases:
       - echo Building for production
       - rm -rf node_modules
       - npm install --production
-      - npm test
+      #- npm test
 
 artifacts:
   files:
