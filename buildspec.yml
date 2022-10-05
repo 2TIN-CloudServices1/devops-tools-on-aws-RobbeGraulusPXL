@@ -20,4 +20,4 @@ phases:
 artifacts:
   files:
     - "**/*"
-  name: MyMegaApp-$(date +%Y-%m-%d) 
+  name: MyMegaApp-$(date +%Y-%m-%d)
